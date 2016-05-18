@@ -1,0 +1,372 @@
+<<quote>>
+
+You want virtual and easy-to-use shops? [[http://dev.bukkit.org/bukkit-plugins/bossshop|**BossShop**]] allows to create the most player friendly shops ever!
+
+Unleash the Power of an unique economy system: [[http://dev.bukkit.org/bukkit-plugins/playerpoints/|**PlayerPoints**]] (You can run this beside an other economy plugin)
+
+Allow your players to open a Shop GUI by right-clicking an Item with [[http://dev.bukkit.org/bukkit-plugins/guishopmanager/|**GuiShopManager**]]
+
+You want your VIPs to be able to become invincible but you are afraid of abusing players? Use [[http://dev.bukkit.org/bukkit-plugins/vip-god/|**VIP-God**]] :)
+
+<</quote>>
+
+v3.3.0:
+*Awesome update by Asgarioth
+**[IMPROVE] UUID support & automatic silent migration
+**[IMPROVE] Small changes related to deprecated methods
+**[IMPROVE] The command '/cra time' now works for offline players too
+
+
+v3.2.2:
+*[UPDATE] Updated to 1.9
+
+
+v3.2.1:
+*[IMPROVE] You don't know the name of an Item/Enchantment? No problem! In v3.2.1 you can enter Enchantment/Material IDs.
+
+
+v3.2.0
+*[FIX] Players can no longer sell damaged Tools/Armor/Weapons
+
+
+v3.1.9:
+*[FIX] Updated Code. Fixed possible Item Glitches.
+*[FIX] Now Kills made with a bow are counted too
+
+
+v3.1.8:
+*[FIX] Fixed the /cra settime <name> <time> command
+
+
+v3.1.7:
+*[UPDATE] Updated to 1.6
+*[ADD] Now you can add money variables ("%money%"/"%needed") to your "NotEnoughMoney" message (http://dev.bukkit.org/bukkit-plugins/commandrank-permissionsbukkit/forum/commandrank_forum_ideas/54182-notify-remaining-amount-of-money-on-rankup/#p1)
+
+
+v3.1.6:
+*[UPDATE] Updated to new PlayerPoints API
+
+
+v3.1.5:
+*[ADD] Added Explevels to the AutoRankup system
+
+
+v3.1.4:
+*[ADD] Command to set the onlineTime of players
+*[ADD] Command to set the amount of kills of a player
+
+
+v3.1.3:
+*[FIX] CommandRank was not able to create a new configuration 
+
+
+v3.1.2:
+*[ADD] Added PermissionsDebug which will help to fix missing permissions
+*[FIX] Fixed a little bug which allowed EVERYBODY to create "RankUp"-signs
+*[CHANGE] Now "Don'tAddDefaults" will add new settings but not the default "RankUp"s
+
+
+v3.1.1:
+*[FIX] Players automatically had the CommandRank.exclude.* permission. This caused trouble but is fixed now.
+
+
+v3.1.0:
+*[ADD] Permissions node CommandRank.exclude.* which contains:
+**CommandRank.exclude.auto | Excludes from "AutoRankUp"s
+**CommandRank.exclude.sign | Excludes from sign-"RankUp"s
+**CommandRank.exclude.command | Excludes from command-"RankUp"s
+*[ADD] New message (Main.exclude) was added to the messages.yml
+*[ADD] Optional "RankUp"-information
+*[ADD] Configurable information-text
+*[CHANGE] The reload now even reloads commands
+
+
+v3.0.9:
+*[REMOVE] Removed RankUp event
+*[ADD] Added new CommandRank events:
+**CommandRankReloadEvent
+**CommandRankAddKillEvent
+**CommandRankRankUpCheckEvent
+**CommandRankRankUpActionsEvent
+**CommandRankPlayerLeaveEvent
+
+
+v3.0.7:
+*[ADD] Now you can add enchantments and durability to the items at the NeedItems list
+*[FIX] Now the /cra reload command is able to reload the configuration
+
+
+v3.0.6:
+*[FIX] Now CommandRank updates the inventory of a player after a successful "RankUp"
+*[FIX] The acceptrules command was not working if the "PlayersNeedToReadRules" feature was disabled
+
+
+v3.0.5:
+*[FIX] CommandRank was not able to remove the items from players inventory
+*[ADD] Reload command (was not tested alot) /cra reload
+
+v3.0.4:
+*[FIX] CommandRank didn't know whether the player has the needed items or not
+*[CHANGE] The admincommand /Cra rankup <player> <rankup> was changed into /Cra rankup <rankup> <player>
+
+v3.0.3:
+*[FIX] Repeating message caused a NullPointerException
+*[FIX] Another little bug
+
+
+v.3.0.2:
+*[FIX] Minor bug was fixed
+*[ADD] Added repeating message telling the player to read the rules
+
+
+v3.0.1 - Beta:
+*[FIX] Some bugs were fixed
+*[NOTE] After a few tests the stable CommandRank plugin is going to be released
+
+
+v3.0.0 - Beta:
+*The whole plugin was rewritten
+*The plugin is now very fast 
+*Huge performance improve
+*New config
+*Messages.yml was added
+*Cleaner code
+*New commands
+*New permissions
+*Some other new features
+*BukkitDev description was not edited yet!
+*Warning: The beta version might contain bugs
+
+
+v2.5.0:
+*[CHANGE] CommandRankAPI was changed
+*[ADD] Feature which checks and takes XP was added (Yes XP not XPLevel)
+*[ADD] Command which allows admins to check the onlineTime/kills of a player
+
+
+v2.4.4:
+*[ADD] Now you can remove commands at the plugin.yml
+
+
+v2.4.3:
+*[ADD] Now you are able to disable a single "OtherRankUps"-command
+*[NOTICE] I really have to add the messages.yml soon, when I have enough time
+
+
+v2.4.2:
+*[FIX] Fixed a bug with the ItemsNeededList
+
+
+v2.4.1:
+*[REMOVE] The old password system was removed
+*[ADD] A new password list was introduced
+
+
+v2.4.0:
+*[ADD] Now you can see your kd with /crkills
+*[ADD] You can write your kills/deaths message with color codes like &4 and k, d, kd codes (%k%,%d%, %kd%)
+*[NOTICE] I will add a messages.yml soon 
+
+
+v2.3.8:
+*[FIX] Listing the kd did not work every time
+
+
+v2.3.7:
+*[ADD] KillsMaximum and KillsMinimum
+*[ADD] It saves total kills and deaths (configurable)
+*[ADD] You can see your kd (=kills/deaths) with /crkills when you have the permissions node "CommandRank.Kill.ShowKD"
+
+
+v2.3.6:
+*[CHANGE] You dont have to use the KillListener.List anymore  if you only want to enable the KillListener
+
+
+v2.3.5:
+*[FIX] KillsNeeded did not work
+*[CHANGE] Not enough kills message was changed
+
+
+v2.3.4:
+*Now players will lose kills when they die (configurable)
+
+
+v2.3.3:
+*Added KillsNeeded to sign- and command-RankUp
+
+
+v2.3.2:
+*Fixed little bug
+
+
+v2.3.1:
+*Fixed bug which did not allow to write something at the left of [RankUp]
+
+
+v2.3.0:
+*Fixed economy bug with new Vault version
+*Added subcodes like colored wool
+*Added enchantments
+
+
+v2.2.1:
+*Changed CommandRank.Kills permission to CommandRank.Kill.List
+*Added CommandRank.Kill.List to CommandRank.Kill.*
+*Changed some messages
+*Changed ToLessOnline: "You were to less online" to "NotOnlineEnough: You weren't online long enough for a RankUp"
+*Fixed AutoTimeRankUp bug
+
+
+v2.2.0:
+*Added new permissions nodes. Look at this page to see them: http://dev.bukkit.org/server-mods/commandrank-permissionsbukkit/pages/permissions/
+
+
+v2.1.0 (Beta):
+*Added permissions node to exlude players of this plugin
+*Added command to see the amount of your kills
+
+
+v2.0:
+*Added CommandRankAPI
+*Added custom action and boolean for developers
+
+
+v1.9.9:
+*Fixed some KillListener bugs
+
+
+v1.9.8:
+*Added /Crtime again
+
+
+v1.9.7:
+*Added /crreload and /crpw (forgot them at v1.9.6)
+*Added new file to store data
+*Command /crtime was disabled until I know a better way to display weeks, days, hours and secounds
+
+
+v1.9.6:
+*The whole plugin was rewritten 
+
+
+v1.9.5:
+*Now you can disable that the plugin adds the defaults in the config
+*Added Permissions Node to store the OnlineTime of a player
+*Added new line in config for PermissionsBukkit rankUp command
+*Added command to see onlineTime
+*Added AutoTimeRankUp
+*Added some new Permissions Nodes
+*Fixed some typos
+*Now the console can execute /crreload
+
+
+v1.9.4:
+*Added the /rankUp command
+*Now you can add a %price% variable at the NotEnoughMoney text
+
+
+v1.9.3:
+*Added configurable PlayerCommandList ( this commands will be executed by the player )
+
+
+v1.9.2:
+*Added configurable passwords
+*Now you only loose the items, you need for rankUp, if you have enough money too
+*Now you can reload your config ( /CRreload)
+
+
+v1.9.1:
+*Now you can just reload your server to reload the config, if you have [code]
+onlineTimeEnabled: false
+[/code]
+
+
+v1.9:
+*Added list of commands, which the console will execute on RankUp (configurable)
+*Added KillListener : autoRankUp on x number of kills
+*Fixed a bug
+
+
+v1.8.1:
+*Now you can disable the OnlineTimeListener 
+
+
+v1.8:
+*Added configurable list of items,which the players get on rankUp
+
+
+v1.7.1:
+*Fixed console rankUp on SignRankUp
+*Added itemlist with items needed if the player has not enough items
+*Fixed different bugs
+
+
+v1.7:
+*Added itemlist: The player must have this items to rankUp (configurable)
+
+
+v1.6:
+*Finally you dont need CommandRank.getRank for a default RankUp with a sign
+*Added onlineTime
+
+
+v1.5.2:
+*Fixed bug if a player buys a rankUp
+
+
+v1.5.1:
+*Changed config
+*Added link to config
+
+
+v1.5:
+*Now you have different groups in the config
+*You can add/remove infinite groups
+*The groups can be written on signs
+*Added new permissions for the groups
+*Added message if you create a sign
+
+
+v1.4.4:
+*Fixed some bugs
+*Now players will get a message, if they do not have permissions to use a sign
+
+
+v1.4.3:
+*Now you can have permissions node CommandRank.useSign without CommandRank.getRank to rank yourself up.
+
+
+v1.4.2:
+*Fixed bug: Signs on a wall did not work
+
+
+v1.4.1:
+*Updated plugin.yml
+
+
+v1.4:
+*Economy Support Added
+*Configurable price added
+
+
+
+v1.3:
+*Now you can set the command, which should be executed with /acceptrules
+
+
+v1.2:
+*Now you can create a sign to RankUp
+*You can only create the RankUp sign with the permissions CommandRank.createSign
+*SignText is configurable
+*You can only use the RankUp sign with the permissions CommandRank.useSign
+
+
+v1.1:
+*Added configurable Healing 
+*Added configurable Feed
+*Added that the player get a configurable armor
+*Added that the player get configurable tools
+
+
+v1.0:
+* First and new file

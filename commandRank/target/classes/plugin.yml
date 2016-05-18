@@ -1,0 +1,87 @@
+name: CommandRank
+version: 3.3.0
+description: High configurable promotion plugin
+author: Black_ixx
+website: http://felix.neuby.de
+main: org.black_ixx.commandRank.CommandRank
+commands:
+  acceptRules:
+   description: Accept the rules
+  declinerules:
+   description: Declines the rules
+  rankup:
+   description: RankUp command
+  cra:
+   description: Allows admins to check onlineTime/kills of a player
+  cr:
+   description: Allows players to check their kills/time
+  password:
+   description: Allows players to enter a password
+permissions:
+  CommandRank.*:
+    description: Gives access to all CommandRank permissions
+    children:
+      CommandRank.Admin: true
+      CommandRank.User: true
+  CommandRank.Admin:
+    description: Allows you to use the CommandRank admin features
+    children:
+      CommandRank.createSign: true
+      CommandRank.User: true
+      CommandRank.AdminCommand: true
+  CommandRank.createSign:
+    description: Allows to create a RankUp sign
+    default: op
+  CommandRank.AdminCommand:
+    description: Allows to use the /cra command
+    default: op
+  CommandRank.User:
+    description: Allows you to use the CommandRank user features
+    children:
+      CommandRank.useSign: true
+      CommandRank.AcceptRules: true
+      CommandRank.DeclineRules: true
+      CommandRank.Password: true
+      CommandRank.RankUp.Defaults: true
+      CommandRank.RankUpCommand: true
+      CommandRank.UserCommand: true
+  CommandRank.useSign:
+    description: Allows to use a promotion sign
+    default: op
+  CommandRank.AcceptRules:
+    description: Allows the /acceptrules command
+    default: op
+  CommandRank.DeclineRules:
+    description: Allows the /declinerules command
+    default: op
+  CommandRank.Password:
+    description: Allows to enter a password
+    default: op
+  CommandRank.UserCommand:
+    description: Allows to use the /cr command
+    default: op
+  CommandRank.RankUpCommand:
+    description: Allows to use the /rankup command
+    default: op
+  CommandRank.RankUp.Defaults:
+    description: Allows you to use the default rankups
+    children:
+      CommandRank.RankUp.user: true
+      CommandRank.RankUp.builder: true
+      CommandRank.RankUp.prisoner: true
+  CommandRank.Exclude.*:
+    description: Excludes from rankups
+    default: false
+    children:
+      CommandRank.exclude.auto: true
+      CommandRank.exclude.sign: true
+      CommandRank.exclude.command: true
+  CommandRank.exclude.auto:
+    description: Excludes from auto-rankups
+    default: false
+  CommandRank.exclude.sign:
+    description: Excludes from sign-rankups
+    default: false
+  CommandRank.exclude.command:
+    description: Excludes from command-rankups
+    default: false
